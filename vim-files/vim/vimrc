@@ -1,4 +1,5 @@
 " ========== Vim Basic Settings ============="
+syntax on
 
 " Pathogen settings.
 filetype off
@@ -12,9 +13,9 @@ set nocompatible
 set modelines=0
 
 "TAB settings.
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 " More Common Settings.
@@ -78,6 +79,14 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
+
+" Compile coffee script and goto specified line
+autocmd FileType coffee,js,jade,styl,css,json autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType coffee command! -nargs=1 C silent CoffeeCompile | :<args>
+
+" pretty print json
+nnoremap <C-S-F> :%!python -mjson.tool<CR> 
+
 "set colorcolumn=79
 
 " To  show special characters in Vim
@@ -188,7 +197,6 @@ endif
 "    set t_Co=256
 "    colorschem badwolf
 "endif
-
 " Source the vimrc file after saving it
 "autocmd bufwritepost .vimrc source ~/.vimrc
 
