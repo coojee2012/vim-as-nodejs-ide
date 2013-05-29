@@ -3,7 +3,7 @@
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim-files/vim/bundle/simple-pairs"]
 	path = vim-files/vim/bundle/simple-pairs
-	url = https://github.com/vim-scripts/simple-pairs.git
+	url = https://github.com/scrooloose/simple-pairs.git
 [submodule "vim-files/vim/bundle/minibufexpl"]
 	path = vim-files/vim/bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim.git
@@ -28,3 +28,18 @@
 [submodule "vim-files/vim/bundle/jedi-vim"]
 	path = vim-files/vim/bundle/jedi-vim
 	url = git://github.com/davidhalter/jedi-vim.git
+[submodule "vim-files/vim/bundle/vim-coffee-script"]
+	path = vim-files/vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim-files/vim/bundle/vim-jade"]
+	path = vim-files/vim/bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
+[submodule "vim-files/vim/bundle/YouCompleteMe"]
+	path = vim-files/vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim-files/vim/bundle/ultisnips"]
+	path = vim-files/vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim-files/vim/bundle/vim-stylus"]
+	path = vim-files/vim/bundle/vim-stylus
+	url = https://github.com/scrooloose/vim-stylus.git
