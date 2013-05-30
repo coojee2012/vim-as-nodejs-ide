@@ -1,9 +1,6 @@
 [submodule "vim-files/vim/bundle/nerdtree"]
 	path = vim-files/vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim-files/vim/bundle/simple-pairs"]
-	path = vim-files/vim/bundle/simple-pairs
-	url = https://github.com/scrooloose/simple-pairs.git
 [submodule "vim-files/vim/bundle/minibufexpl"]
 	path = vim-files/vim/bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim.git
@@ -40,6 +37,9 @@
 [submodule "vim-files/vim/bundle/ultisnips"]
 	path = vim-files/vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim-files/vim/bundle/simple-pairs"]
+	path = vim-files/vim/bundle/simple-pairs
+	url = https://github.com/vim-scripts/simple-pairs.git
 [submodule "vim-files/vim/bundle/vim-stylus"]
 	path = vim-files/vim/bundle/vim-stylus
-	url = https://github.com/scrooloose/vim-stylus.git
+	url = https://github.com/wavded/vim-stylus.git
