@@ -8,6 +8,13 @@ call pathogen#infect()
 Helptags
 filetype plugin indent on
 
+" Syntax hightlight "
+syntax on
+
+" Syntax highlight for github .md files "
+au BufRead,BufNewFile *.md
+set filetype=markdown
+
 " Make vim incompatbile to vi.
 set nocompatible
 set modelines=0
@@ -160,6 +167,7 @@ set wildignore+=*.luac "Lua byte code"
 set wildignore+=migrations "Django migrations"
 set wildignore+=*.pyc "Python Object codes"
 set wildignore+=*.orig "Merge resolution files"
+
 
 " Make Sure that Vim returns to the same line when we reopen a file"
 augroup line_return
