@@ -1,6 +1,4 @@
 " ========== Vim Basic Settings ============="
-syntax on
-
 " Pathogen settings.
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -10,10 +8,6 @@ filetype plugin indent on
 
 " Syntax hightlight "
 syntax on
-
-" Syntax highlight for github .md files "
-au BufRead,BufNewFile *.md
-set filetype=markdown
 
 " Make vim incompatbile to vi.
 set nocompatible
@@ -90,6 +84,9 @@ set formatoptions=qrn1
 " Compile coffee script and goto specified line
 autocmd FileType coffee,js,jade,styl,css,json autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd FileType coffee command! -nargs=1 C silent CoffeeCompile | :<args>
+
+" Syntax highlight for github .md files "
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " pretty print json
 nnoremap <C-S-F> :%!python -mjson.tool<CR> 
