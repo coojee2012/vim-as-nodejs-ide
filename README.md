@@ -59,5 +59,8 @@ $ make
 cd ~/.vim/bundle/YouCompleteMe
 ./install.sh
 ```
+#### Usage jsbeautify
+```
+<leader>ff (cf. ,ff)
+```
 If you have any troubles of installing it, please check [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-
