@@ -8,7 +8,10 @@ filetype plugin indent on
 
 " Syntax hightlight "
 syntax on
-
+set bs=2  " 在insert模式下用退格键删除
+" syntax enable
+colorscheme molokai " 设置主题,这里我用的是monokai。具体的可以见后面的解释
+set number " 显示行号
 " Make vim incompatbile to vi.
 set nocompatible
 set modelines=0
@@ -32,9 +35,11 @@ set visualbell
 
 set cursorline
 set ttyfast
-set ruler
-set backspace=indent,eol,start
-set laststatus=2
+set ruler " 打开状态栏标尺
+
+
+set showmatch " 插入括号时，短暂地跳转到匹配的对应括号
+set matchtime=2 " 短暂跳转到匹配括号的时间
 
 "set relativenumber
 set number
@@ -43,7 +48,6 @@ set norelativenumber
 "set undofile
 set shell=/bin/bash
 set lazyredraw
-set matchtime=3
 
 "Changing Leader Key
 let mapleader = ","
@@ -65,16 +69,28 @@ set mouse=a
 "Settings for Searching and Moving
 nnoremap / /\v
 vnoremap / /\v
-set ignorecase
-set smartcase
+set nowrapscan " 禁止在搜索到文件两端时重新搜索
+set incsearch " 输入搜索内容时就显示搜索结果
+set ignorecase smartcase " 搜索时忽略大小写，但在有一个或以上大写字母时仍保持对大小写敏感
 set gdefault
 set incsearch
-set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
+set smartindent " 开启新行时使用智能自动缩进
+set backspace=indent,eol,start " 不设定在插入状态无法用退格键和 Delete 键删除回车符
+" set cmdheight=1 " 设定命令行的行数为 1
+set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
+set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\  " 设置在状态行显示的信息
+set foldenable " 开始折叠
+set foldmethod=marker " 设置语法折叠
+set foldcolumn=0 " 设置折叠区域的宽度
+setlocal foldlevel=1 " 设置折叠层数为
+set foldclose=all " 设置为自动关闭折叠
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+" 用空格键来开关折叠
 
 " Make Vim to handle long lines nicely.
 set wrap
@@ -219,6 +235,12 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
+
+" syntastic setting
+" use jshint
+let g:syntastic_javascript_checkers = ['jshint']
+" show any linting errors immediately
+let g:syntastic_check_on_open = 1
 
 " Rope Plugin settings
 imap <leader>j <ESC>:RopeGotoDefinition<cr>

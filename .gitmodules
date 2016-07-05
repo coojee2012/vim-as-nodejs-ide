@@ -31,9 +31,6 @@
 [submodule "vim-files/vim/bundle/vim-jade"]
 	path = vim-files/vim/bundle/vim-jade
 	url = git://github.com/digitaltoad/vim-jade.git
-[submodule "vim-files/vim/bundle/YouCompleteMe"]
-	path = vim-files/vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "vim-files/vim/bundle/ultisnips"]
 	path = vim-files/vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
@@ -43,3 +40,12 @@
 [submodule "vim-files/vim/bundle/vim-stylus"]
 	path = vim-files/vim/bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus.git
+[submodule "vim-files/vim/bundle/node"]
+	path = vim-files/vim/bundle/node
+	url = https://github.com/moll/vim-node.git
+[submodule "vim-files/vim/bundle/vim-javascript"]
+	path = vim-files/vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim-files/vim/bundle/javascript-libraries-syntax"]
+	path = vim-files/vim/bundle/javascript-libraries-syntax
+	url = https://github.com/othree/javascript-libraries-syntax.vim.git
